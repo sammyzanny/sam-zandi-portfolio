@@ -22,17 +22,11 @@ class App extends React.Component {
     <Router >
       <React.Fragment>
       <NavBar currentUser={this.props.currentUser}/>
-     { this.props.currentUser ? <Button onClick={this.signOut} variant="contained" color="primary" style={{float: "right"}}>Sign Out</Button> : null}
       <Switch >
         <Route exact path="/aboutme" render={(rp) => <Items {...rp} currentUser={this.props.currentUser} items={this.props.items} type="items"/>} />
-        {this.props.currentUser ? 
         <Route exact path="/apps" render={(rp) => <Profile {...rp} loggedIn={!!this.props.currentUser}/>} />
         <Route exact path="/research" render={(rp) => <Items {...rp} currentUser={this.props.currentUser} items={this.props.customItems} type="items"/>} />
         <Route exact path="/blog" component={Blog} />
-        <Route exact path="/blog" render={(rp) => <Login {...rp} loggedIn={!!this.props.currentUser}/>} />
-        <Route exact path="/sign-up" render={(rp) => <SignUp {...rp} loggedIn={!!this.props.currentUser}/> } />
-        <Route exact path="/users/with/:itemname" render={(rp) => <UserSearch {...rp} currentUser={this.props.currentUser}/> } />
-        <Route exact path="/users/named/:username" render={(rp) => <UserSearch {...rp} currentUser={this.props.currentUser}/> } />
         <Route path='/' render={(rp) => <Home {...rp}/>} />
       </Switch>
       </ React.Fragment>
