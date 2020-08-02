@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Route, Switch
+} from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Items from './containers/Items';
+import Profile from './components/Profile';
+import ItemForm from './components/ItemForm';
+import Home from './components/Home'
+import {connect} from 'react-redux';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import { login } from './actions/items'
+import  UserSearch from './containers/UserSearch'
+import Button from '@material-ui/core/Button'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+  
+  render(){
+    return (
+    <Router >
+      <React.Fragment>
+      <NavBar currentUser={this.props.currentUser}/>
+      <Switch >
+        <Route exact path="/aboutme" render={(rp) => <Items {...rp} currentUser={this.props.currentUser} items={this.props.items} type="items"/>} />
+        <Route exact path="/apps" render={(rp) => <Profile {...rp} loggedIn={!!this.props.currentUser}/>} />
+        <Route exact path="/research" render={(rp) => <Items {...rp} currentUser={this.props.currentUser} items={this.props.customItems} type="items"/>} />
+        <Route exact path="/blog" component={Blog} />
+        <Route path='/' render={(rp) => <Home {...rp}/>} />
+      </Switch>
+      </ React.Fragment>
+    </Router>
+  )}
+};
 
-export default App;
+
+
+export default App
