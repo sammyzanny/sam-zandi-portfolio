@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 
-function Research() {
+function Example(props) {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <p>{props.name} clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
     </div>
   );
 }
+

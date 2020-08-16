@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Apps() {
+function MyApps() {
   const [count, setCount] = useState(0);
 
   return (
