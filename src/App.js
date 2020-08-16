@@ -4,15 +4,11 @@ import {
   Route, Switch
 } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Items from './containers/Items';
-import Profile from './components/Profile';
-import ItemForm from './components/ItemForm';
-import Home from './components/Home'
-import {connect} from 'react-redux';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import { login } from './actions/items'
-import  UserSearch from './containers/UserSearch'
+import AboutMe from './containers/AboutMe';
+import MyApps from './containers/MyApps';
+import Research from './pages/Research';
+import Blog from './pages/Blog'
+import Home from './pages/Home'
 import Button from '@material-ui/core/Button'
 
 class App extends React.Component {
@@ -23,9 +19,9 @@ class App extends React.Component {
       <React.Fragment>
       <NavBar currentUser={this.props.currentUser}/>
       <Switch >
-        <Route exact path="/aboutme" render={(rp) => <Items {...rp} currentUser={this.props.currentUser} items={this.props.items} type="items"/>} />
-        <Route exact path="/apps" render={(rp) => <Profile {...rp} loggedIn={!!this.props.currentUser}/>} />
-        <Route exact path="/research" render={(rp) => <Items {...rp} currentUser={this.props.currentUser} items={this.props.customItems} type="items"/>} />
+        <Route exact path="/aboutme" render={(rp) => <AboutMe {...rp} currentUser={this.props.currentUser} items={this.props.items} type="items"/>} />
+        <Route exact path="/apps" render={(rp) => <MyApps {...rp} />} />
+        <Route exact path="/research" render={(rp) => <Research {...rp} currentUser={this.props.currentUser} items={this.props.customItems} type="items"/>} />
         <Route exact path="/blog" component={Blog} />
         <Route path='/' render={(rp) => <Home {...rp}/>} />
       </Switch>
