@@ -34,7 +34,7 @@ src/
     identity.ts    Name, contact links, the pitch paragraph, boot lines
     dossiers.ts    The four "what I actually do" files, with their evidence
     fieldNotes.ts  Opinion pieces — see the warning below
-    record.ts      Roles, projects (TownCert first), skills, education
+    record.ts      Roles, projects (TownCert first), skills (resume groups, verbatim), education
     samples.ts     Curated work samples: the Citi loan flow, screen by screen
     samples.json   Uploads exported from the page and committed back
     terminal.ts    Terminal commands

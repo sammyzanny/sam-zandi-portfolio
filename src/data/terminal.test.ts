@@ -36,6 +36,12 @@ describe('runCommand', () => {
     expect(help).not.toContain('sudo')
   })
 
+  it('positions hire as full stack, not frontend-leaning', () => {
+    const text = runCommand('hire')?.join('\n') ?? ''
+    expect(text).toContain('full stack')
+    expect(text.toLowerCase()).not.toContain('frontend')
+  })
+
   it('includes TownCert in projects', () => {
     expect(runCommand('projects')?.join('\n')).toContain('TownCert')
   })

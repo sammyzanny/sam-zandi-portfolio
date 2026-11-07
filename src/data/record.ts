@@ -96,24 +96,51 @@ export const PROJECTS: Project[] = [
 ]
 
 export const SKILLS: SkillGroup[] = [
-  { group: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'SQL', 'HTML', 'CSS'] },
+  { group: 'Languages', items: ['Java', 'TypeScript', 'JavaScript', 'SQL', 'Ruby', 'HTML', 'CSS'] },
   {
-    group: 'Frameworks',
-    items: ['Spring Boot', 'Angular', 'React', 'React Native', 'Redux', 'AEM'],
+    group: 'Backend',
+    items: [
+      'Spring Boot',
+      'RESTful APIs',
+      'Microservices',
+      'Node.js',
+      'Next.js',
+      'Stripe Billing',
+      'Clerk',
+      'Maven',
+      'Ruby on Rails',
+      'Kafka',
+      'Airflow',
+    ],
   },
-  { group: 'Data & APIs', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'RESTful APIs'] },
+  {
+    group: 'Frontend',
+    items: [
+      'Angular',
+      'Module Federation',
+      'React',
+      'React Native',
+      'Redux',
+      'Tailwind CSS',
+      'AEM',
+      'Figma',
+    ],
+  },
+  { group: 'Data', items: ['PostgreSQL', 'Drizzle ORM', 'MySQL', 'MongoDB'] },
   {
     group: 'Cloud & DevOps',
     items: [
-      'AWS',
+      'AWS (S3)',
+      'Vercel',
+      'Cloudflare R2',
+      'Neon',
       'Google Cloud',
       'Docker',
       'Jenkins',
       'CI/CD',
-      'Maven',
       'Artifactory',
       'Git',
-      'Module Federation',
+      'SonarQube',
     ],
   },
   {
@@ -121,17 +148,29 @@ export const SKILLS: SkillGroup[] = [
     items: [
       'JUnit',
       'Jest',
+      'Vitest',
+      'Playwright',
       'Karma',
-      'Cucumber',
       'Selenium',
+      'Cucumber',
       'Zephyr',
-      'SonarQube',
-      'AXE',
+      'AXE (accessibility)',
       'Glassbox',
-      'Splunk',
     ],
   },
-  { group: 'Practice & Tools', items: ['Agile', 'Jira', 'Figma', 'GitHub Copilot', 'Devin AI', 'Claude'] },
+  {
+    group: 'AI & Process',
+    items: [
+      'GitHub Copilot',
+      'Devin AI',
+      'Claude Code',
+      'AI-assisted development',
+      'Splunk',
+      'Jira',
+      'Agile/Scrum',
+      'WCAG/ADA compliance',
+    ],
+  },
 ]
 
 export const EDUCATION = {

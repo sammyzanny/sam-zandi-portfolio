@@ -23,19 +23,19 @@ export const DOSSIERS: Dossier[] = [
         ' was live and serving thousands of production users, which meant every change had to land without anyone noticing it had.',
       ],
       [
-        'I moved the unit test suite off Karma and onto Jest — around 150 components, one at a time. GitHub Copilot drafted each conversion; I read every one before it merged, because a test that passes for the wrong reason is worse than no test.',
+        'I moved the unit test suite off Karma and onto Jest — around 150 components, one at a time. GitHub Copilot drafted the boilerplate; I read every conversion before it merged, because a test that passes for the wrong reason is worse than no test. Test runtime dropped by about 40%, and the browser-dependent flaky tests went with it.',
       ],
       [
-        'I changed our deployment strategy to Module Federation so teams could ship on their own cadence instead of queueing behind a shared release. Then I cleaned the repository itself: automated branch removal, sensitive files remediated.',
+        'I led the move to Module Federation so teams could ship on demand instead of waiting for the biweekly release train. Then I cleaned the repository itself: two hundred-odd stale branches removed, sensitive files purged from history.',
       ],
       [
         'None of that appears in a sprint demo. All of it is why the next five years of that codebase cost less than the last five.',
       ],
     ],
     evidence: [
-      'Migrated Unit Testing Suite from Karma to Jest with the assistance of GitHub Copilot, modernizing ~150 components.',
-      'Transitioned our deployment strategy to use Module Federation to increase deployment frequency.',
-      'Performed large-scale repository cleanup including automated branch removal and sensitive file remediation.',
+      'Migrated the unit test suite from Karma to Jest across ~150 components using GitHub Copilot to automate boilerplate conversion, cutting test runtime by ~40% and eliminating browser-dependent flaky tests.',
+      "Led the platform's migration to Module Federation, enabling independent micro-frontend deployments and increasing deployment frequency from biweekly release trains to on-demand.",
+      "Remediated repo security risks by removing 200+ stale branches and purging sensitive files from history to meet Citi's source-control policy.",
     ],
     stack: ['Jest', 'Karma', 'Module Federation', 'GitHub Copilot', 'Git'],
   },
@@ -45,7 +45,7 @@ export const DOSSIERS: Dossier[] = [
     standfirst: 'Financial software has no forgiving path.',
     body: [
       [
-        'Full-stack feature work against Java Spring Boot microservice REST APIs with an Angular and TypeScript frontend on top.',
+        'Full-stack feature work on a platform serving more than five thousand production users, against Java Spring Boot microservice REST APIs with an Angular and TypeScript frontend on top.',
       ],
       [
         "I built customer onboarding, including Citi's Pre-Login Experience — the stretch an applicant walks through before they have an account, where every extra field is a chance to lose them.",
@@ -55,9 +55,9 @@ export const DOSSIERS: Dossier[] = [
       ],
     ],
     evidence: [
-      'Engineered full-stack features with Java Spring Boot Microservice REST APIs and Angular Frontend w/ Typescript.',
-      "Developed customer onboarding features including Citi's Pre-Login Experience for new applicants.",
-      'Maintained mobile screens with responsive design in compliance with ADA and WCAG accessibility standards.',
+      "Built and maintained Citi's loan application platform serving 5,000+ production users across 65+ monthly releases, delivering full-stack features with Java Spring Boot microservice REST APIs and an Angular/TypeScript frontend.",
+      "Developed customer onboarding features, including Citi's Pre-Login Experience for new loan applicants.",
+      'Built and maintained responsive mobile screens compliant with ADA and WCAG 2.1 accessibility standards, validated with AXE.',
     ],
     stack: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'RESTful APIs', 'AXE'],
   },
@@ -70,16 +70,16 @@ export const DOSSIERS: Dossier[] = [
         'I lived in Splunk. Tracing one failed application across service boundaries until the log line that actually mattered surfaced, and resisting the urge to fix the first plausible thing instead of the real one.',
       ],
       [
-        'Then the fix, then the regression test, then the release. I resolved API and UI defects across multiple releases and the platform got measurably steadier for it.',
+        'Then the fix, then the regression test, then the release. Over a few years of that, mean time to resolution came down by about 30%, and the platform got measurably steadier for it.',
       ],
       [
         'Physics is where I learned this. You do not debug a system by staring harder at it. You form a model, predict what it would produce, and go check.',
       ],
     ],
     evidence: [
-      'Investigate and resolve production issues through Splunk log analysis across distributed microservices.',
-      'Resolved API/UI defects and improved platform stability across multiple releases.',
-      'Tested code with Selenium automated scripts linked w/ Zephyr, JUnit, and Karma Unit Tests.',
+      'Owned production support across 45+ monthly releases, resolving 200+ API/UI defects and incidents via Splunk log analysis across distributed microservices and cutting mean time to resolution by ~30%.',
+      'Resolved 100+ API and UI defects across 20 monthly releases, improving platform stability and reducing production escapes.',
+      'Wrote Selenium automation linked to Zephyr test cases, plus JUnit and Karma unit tests, expanding regression coverage.',
     ],
     stack: ['Splunk', 'Selenium', 'JUnit', 'Zephyr', 'Cucumber', 'Glassbox'],
   },
@@ -89,7 +89,7 @@ export const DOSSIERS: Dossier[] = [
     standfirst: 'I taught before I shipped, and it shows in how I ship.',
     body: [
       [
-        'I trained incoming developers and stayed with them until they could contribute without anyone reading over their shoulder. I led Agile grooming so sprints stopped ending in surprises, and I wrote the internal documentation nobody volunteers for.',
+        'I onboarded six incoming developers and stayed with each until they could contribute without anyone reading over their shoulder — about four weeks, as it turned out. I led Agile grooming across three teams so sprints stopped ending in surprises, and I wrote the internal documentation nobody volunteers for.',
       ],
       [
         'Before software I taught math and physics: Homewood-Flossmoor High School, online tutoring through ',
@@ -103,10 +103,9 @@ export const DOSSIERS: Dossier[] = [
       ],
     ],
     evidence: [
-      'Train incoming developers and onboard them progressively until they are able to contribute independently.',
-      'Lead Agile grooming sessions coordinating development work across teams to improve sprint delivery consistency.',
-      'Led full-sized classes (30+ students K-12) teaching Robotics/Drone Technology.',
-      'Inspired STEM careers in underserved communities (Partnered w/ CPS).',
+      'Onboarded and trained 6 incoming developers, bringing each to independent contribution within 4 weeks.',
+      'Led Agile grooming sessions coordinating work across 3 teams, raising sprint commitment completion to ~90%.',
+      'Math & Physics Tutor / STEM Instructor — Masters Plus, Brainfuse, IPERC, NextWaveSTEM | 01/2019 – 11/2020. HS math/physics tutoring; K-12 robotics classes.',
     ],
     stack: ['Agile', 'Jira', 'Internal documentation', 'Mentoring'],
   },
