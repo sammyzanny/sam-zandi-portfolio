@@ -1,0 +1,65 @@
+/*
+ * Vice City palette.
+ *
+ * This page commits to one visual world — a Miami night — rather than
+ * offering a light and a dark theme. Every colour is therefore declared
+ * once, here, and every component reads it through a token. Nothing
+ * should hard-code a hex value outside this file.
+ */
+
+:root {
+  /* Grounds, darkest to lightest. */
+  --ink: #0a0416;
+  --ink-2: #160b30;
+  --ink-3: #241249;
+  --panel: rgba(22, 11, 48, 0.88);
+  --panel-solid: rgba(10, 4, 22, 0.86);
+
+  /* Neon. Pink leads, cyan answers, gold is for numbers only. */
+  --pink: #ff2e88;
+  --magenta: #c724b1;
+  --cyan: #00e5ff;
+  --gold: #ffd166;
+  --orange: #ff7a45;
+
+  /* Type. The greys carry a violet bias so they belong to the ground. */
+  --text: #f3eaff;
+  --text-2: #dccff0;
+  --muted: #a98fc9;
+  --dim: #7a6299;
+
+  /* Edges. */
+  --edge: rgba(0, 229, 255, 0.2);
+  --edge-hot: rgba(255, 46, 136, 0.45);
+  --edge-soft: rgba(169, 143, 201, 0.16);
+
+  /* Semantic, kept away from the accent hues. */
+  --ok: #6ee7a8;
+  --warn: #ffd166;
+  --bad: #ff6b6b;
+
+  /* Type stacks. Monoton is used exactly twice: the wordmark and the
+     sign-off. Everywhere else is Archivo, with JetBrains Mono for
+     anything that behaves like data. */
+  --f-display: 'Monoton', cursive;
+  --f-sans: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Scale. */
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.15rem;
+  --step-2: clamp(1.25rem, 2.4vw, 1.55rem);
+  --step-3: clamp(1.5rem, 3.2vw, 2rem);
+  --step-4: clamp(2rem, 5vw, 3.25rem);
+
+  /* Rhythm. */
+  --gap-xs: 6px;
+  --gap-s: 12px;
+  --gap-m: 20px;
+  --gap-l: 32px;
+  --gap-xl: clamp(56px, 9vh, 92px);
+
+  --maxw: 1120px;
+  --nav-h: 52px;
+}

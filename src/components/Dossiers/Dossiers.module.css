@@ -1,0 +1,138 @@
+.list {
+  display: grid;
+  gap: var(--gap-m);
+}
+
+.card {
+  border: 1px solid var(--edge);
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 300px);
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--edge-hot);
+  box-shadow: 0 14px 44px rgba(199, 36, 177, 0.18);
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main {
+  padding: 26px 28px;
+  display: grid;
+  gap: var(--gap-s);
+  align-content: start;
+}
+
+.fileNo {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--pink);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--step-2);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.standfirst {
+  margin: 0;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+}
+
+.body {
+  display: grid;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.body p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 15.5px;
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+/* The evidence rail. Distinct from the prose: mono, cyan-edged, and
+   labelled, so it reads as source material rather than more copy. */
+.aside {
+  border-left: 1px solid var(--edge);
+  padding: 26px 24px;
+  display: grid;
+  gap: var(--gap-s);
+  align-content: start;
+  background: rgba(7, 3, 15, 0.42);
+}
+
+@media (max-width: 900px) {
+  .aside {
+    border-left: none;
+    border-top: 1px solid var(--edge);
+  }
+}
+
+.asideLabel {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.evidence {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.evidence li {
+  position: relative;
+  padding-left: 16px;
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.evidence li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.stackItem {
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  background: rgba(0, 229, 255, 0.06);
+  color: var(--text-2);
+  border-radius: 2px;
+}

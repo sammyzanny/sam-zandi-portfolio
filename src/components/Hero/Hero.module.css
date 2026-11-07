@@ -1,0 +1,166 @@
+.hero {
+  padding: clamp(48px, 9vh, 88px) 0 clamp(36px, 6vh, 64px);
+  display: grid;
+  gap: var(--gap-l);
+  justify-items: center;
+  text-align: center;
+}
+
+.wordmark {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  line-height: 1;
+  font-size: clamp(40px, 9.5vw, 104px);
+  letter-spacing: 0.02em;
+  color: #fff0fa;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 16px var(--pink),
+    0 0 42px var(--magenta),
+    0 0 92px rgba(199, 36, 177, 0.55);
+  animation: buzz 5.5s ease-in-out infinite;
+}
+
+/* A tube that is very slightly failing. */
+@keyframes buzz {
+  0%,
+  92%,
+  100% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 0.72;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.85;
+  }
+}
+
+.role {
+  margin: 0;
+  font-stretch: 118%;
+  font-weight: 600;
+  font-size: clamp(12px, 2vw, 16px);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  text-shadow: 0 0 22px rgba(0, 229, 255, 0.45);
+}
+
+.rule {
+  width: min(520px, 80%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--pink), var(--cyan), transparent);
+}
+
+/* Hero body: boot panel on the left, pitch on the right. */
+.body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: var(--gap-m);
+  align-items: stretch;
+  text-align: left;
+}
+
+@media (max-width: 780px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.boot {
+  border: 1px solid var(--edge);
+  background: rgba(7, 3, 15, 0.72);
+  padding: 16px 18px;
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.85;
+  color: var(--ok);
+  min-height: 148px;
+}
+
+.bootLine {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.caret {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  vertical-align: -2px;
+  background: var(--ok);
+  animation: blink 1.05s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.pitch {
+  border: 1px solid var(--edge);
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  padding: 22px 26px;
+  display: grid;
+  gap: var(--gap-s);
+  align-content: center;
+}
+
+.pitch p {
+  margin: 0;
+  font-size: var(--step-1);
+  line-height: 1.72;
+  color: var(--text-2);
+  max-width: 62ch;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--edge);
+  background: rgba(22, 11, 48, 0.82);
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+a.chip:hover {
+  color: var(--text);
+  border-color: var(--edge-hot);
+  box-shadow: 0 0 20px rgba(255, 46, 136, 0.25);
+  transform: translateY(-1px);
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 8px var(--pink);
+}

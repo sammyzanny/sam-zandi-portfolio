@@ -1,0 +1,119 @@
+/* The fixed backdrop: gradient sky, neon sun, horizon, perspective grid,
+   two palms. Everything here is decoration and is marked aria-hidden by
+   the component. */
+
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 70% at 50% 88%, rgba(199, 36, 177, 0.28) 0%, rgba(10, 4, 22, 0) 62%),
+    linear-gradient(180deg, #07030f 0%, #120726 44%, #200c36 72%, var(--ink) 100%);
+}
+
+.sun {
+  position: absolute;
+  left: 50%;
+  top: calc(76vh - min(380px, 58vw) * 0.62);
+  width: min(380px, 58vw);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  /* Kept dim: the sun sits behind translucent panels for the whole
+     scroll, so anything brighter washes out body text. */
+  opacity: 0.55;
+  background: linear-gradient(180deg, var(--gold) 0%, #ff9e5e 34%, var(--pink) 66%, #8e1a63 100%);
+  box-shadow:
+    0 0 60px rgba(255, 46, 136, 0.2),
+    0 0 150px rgba(255, 122, 69, 0.1);
+}
+
+/* The slatted lower half. Dark bands rather than ground-coloured ones so
+   the effect survives the gradient behind it. */
+.sun::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-linear-gradient(180deg, transparent 0 7px, rgba(7, 3, 15, 0.92) 7px 13px);
+  -webkit-mask-image: linear-gradient(180deg, transparent 44%, #000 56%);
+  mask-image: linear-gradient(180deg, transparent 44%, #000 56%);
+}
+
+.horizon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 76vh;
+  height: 1px;
+  opacity: 0.55;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  box-shadow: 0 0 18px 2px rgba(0, 229, 255, 0.35);
+}
+
+.floor {
+  position: absolute;
+  left: -60%;
+  right: -60%;
+  top: 76vh;
+  height: 34vh;
+  transform: perspective(300px) rotateX(76deg);
+  transform-origin: top center;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(0, 229, 255, 0.26) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(0deg, rgba(255, 46, 136, 0.22) 0 1px, transparent 1px 64px);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+  mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+  animation: drive 7s linear infinite;
+}
+
+@keyframes drive {
+  from {
+    background-position:
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 0,
+      0 64px;
+  }
+}
+
+.palm {
+  position: absolute;
+  bottom: 0;
+  height: 46vh;
+  width: auto;
+  opacity: 0.32;
+  color: #1b0a30;
+}
+
+.palmLeft {
+  left: -2vw;
+}
+
+.palmRight {
+  right: -2vw;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 800px) {
+  .palm {
+    height: 30vh;
+    opacity: 0.24;
+  }
+}
+
+/* A faint CRT grille over the whole page. */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0 1px, transparent 1px 3px);
+}

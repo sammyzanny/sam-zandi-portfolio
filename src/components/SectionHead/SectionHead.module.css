@@ -1,0 +1,38 @@
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: var(--gap-m);
+}
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink);
+  text-shadow: 0 0 12px rgba(255, 46, 136, 0.5);
+  white-space: nowrap;
+}
+
+.title {
+  margin: 0;
+  font-stretch: 115%;
+  font-weight: 700;
+  font-size: var(--step-3);
+  letter-spacing: 0.02em;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--edge), transparent);
+}
+
+.note {
+  margin: 0 0 var(--gap-m);
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: var(--step--1);
+  line-height: 1.7;
+}

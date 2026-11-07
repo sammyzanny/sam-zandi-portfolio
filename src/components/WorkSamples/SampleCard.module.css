@@ -1,0 +1,199 @@
+.card {
+  border: 1px solid var(--edge);
+  background: var(--panel);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--edge-hot);
+  box-shadow: 0 12px 36px rgba(199, 36, 177, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Screenshots are tall pages; crop to the top of the page, which is
+   where the heading and the first interaction live. */
+.shot {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  background: #0d0620;
+  display: block;
+  border-bottom: 1px solid var(--edge);
+}
+
+.fileIcon {
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(255, 46, 136, 0.14), rgba(0, 229, 255, 0.1));
+  font-family: var(--f-mono);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+
+.body {
+  padding: 14px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.tag {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.title {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--text-2);
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+.meta {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.mini {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--f-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.mini:hover {
+  color: var(--pink);
+}
+
+.danger {
+  color: var(--bad);
+}
+
+/* ---- Featured ------------------------------------------------------ */
+
+.feature {
+  border: 1px solid var(--edge-hot);
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  box-shadow: 0 18px 60px rgba(199, 36, 177, 0.16);
+}
+
+@media (max-width: 900px) {
+  .feature {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The featured screenshot is shown whole, not cropped: it is the point. */
+.featureShotWrap {
+  background: #0d0620;
+  border-right: 1px solid var(--edge);
+  display: grid;
+  align-content: start;
+}
+
+@media (max-width: 900px) {
+  .featureShotWrap {
+    border-right: none;
+    border-bottom: 1px solid var(--edge);
+  }
+}
+
+.featureShot {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.featureBody {
+  padding: 26px 28px 24px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.featureEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flag {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 2px;
+  border: 1px solid var(--edge-hot);
+  background: rgba(255, 46, 136, 0.12);
+  color: var(--pink);
+}
+
+.featureTitle {
+  margin: 0;
+  font-size: var(--step-2);
+  font-weight: 700;
+}
+
+.featureNote {
+  margin: 0;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+}
+
+.story {
+  display: grid;
+  gap: 11px;
+  margin-top: 4px;
+}
+
+.story p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-2);
+  max-width: 62ch;
+}

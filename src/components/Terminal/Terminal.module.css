@@ -1,0 +1,127 @@
+.shell {
+  border: 1px solid var(--edge);
+  background: rgba(7, 3, 15, 0.88);
+  backdrop-filter: blur(8px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: inset 0 0 80px rgba(0, 229, 255, 0.05);
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--edge);
+  background: rgba(22, 11, 48, 0.7);
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.lamps {
+  display: flex;
+  gap: 5px;
+}
+
+.lamp {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.lamp:nth-child(1) {
+  background: var(--pink);
+}
+.lamp:nth-child(2) {
+  background: var(--gold);
+}
+.lamp:nth-child(3) {
+  background: var(--ok);
+}
+
+.hint {
+  margin-left: auto;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
+.screen {
+  padding: 16px 18px 14px;
+  min-height: 320px;
+  max-height: 460px;
+  overflow-y: auto;
+  font-family: var(--f-mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  cursor: text;
+}
+
+.line {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.echo {
+  color: var(--cyan);
+}
+
+.error {
+  color: var(--bad);
+}
+
+.prompt {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.sigil {
+  color: var(--pink);
+  flex: none;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font: inherit;
+  padding: 0;
+  caret-color: var(--cyan);
+  min-width: 0;
+}
+
+.quickRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--gap-s);
+}
+
+.quick {
+  background: transparent;
+  border: 1px solid var(--edge);
+  border-radius: 3px;
+  padding: 5px 11px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.quick:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}

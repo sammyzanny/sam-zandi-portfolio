@@ -1,0 +1,101 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(180deg, rgba(7, 3, 15, 0.9), rgba(7, 3, 15, 0.6));
+  border-bottom: 1px solid var(--edge);
+}
+
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-m);
+}
+
+.mark {
+  font-family: var(--f-mono);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--pink);
+  text-shadow: 0 0 12px rgba(255, 46, 136, 0.6);
+  white-space: nowrap;
+}
+
+/* The dial scrolls sideways on narrow screens rather than wrapping into
+   a second row that pushes the page down. */
+.dial {
+  display: flex;
+  gap: 2px;
+  margin-left: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.dial::-webkit-scrollbar {
+  display: none;
+}
+
+.station {
+  display: grid;
+  gap: 1px;
+  padding: 6px 11px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.station:hover,
+.station:focus-visible {
+  border-color: var(--edge);
+  background: rgba(0, 229, 255, 0.06);
+}
+
+.station.active {
+  border-color: var(--edge-hot);
+  background: rgba(255, 46, 136, 0.1);
+}
+
+.callSign {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.station:hover .callSign,
+.station.active .callSign {
+  color: var(--text);
+}
+
+.frequency {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.station.active .frequency {
+  color: var(--pink);
+}
+
+@media (max-width: 620px) {
+  .inner {
+    padding: 8px 16px;
+    gap: var(--gap-s);
+  }
+
+  .mark {
+    font-size: 11px;
+  }
+}

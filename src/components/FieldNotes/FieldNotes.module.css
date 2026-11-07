@@ -1,0 +1,74 @@
+.banner {
+  border: 1px solid rgba(255, 209, 102, 0.4);
+  border-left-width: 3px;
+  background: rgba(255, 209, 102, 0.07);
+  padding: 13px 16px;
+  margin-bottom: var(--gap-m);
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--text-2);
+}
+
+.banner strong {
+  color: var(--gold);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap-m);
+  align-items: start;
+}
+
+.note {
+  border: 1px solid var(--edge);
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  padding: 24px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.badge {
+  justify-self: start;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 209, 102, 0.45);
+  background: rgba(255, 209, 102, 0.1);
+  color: var(--gold);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--step-1);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.dek {
+  margin: 0;
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.body {
+  display: grid;
+  gap: 11px;
+  margin-top: 4px;
+}
+
+.body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-2);
+}

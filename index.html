@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam Zandi</title>
+    <meta
+      name="description"
+      content="Sam Zandi — full stack software developer. Five years building large-scale financial applications."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&family=JetBrains+Mono:wght@400;500;700&family=Monoton&display=swap"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Work samples, embedded in the page.
+
+      On a Claude Artifact the app rewrites this block and republishes
+      the document, which is how uploaded samples survive a reload. On
+      any other host it stays empty and the seed comes from
+      src/data/samples.ts instead.
+    -->
+    <script id="samples-data" type="application/json">[]</script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
