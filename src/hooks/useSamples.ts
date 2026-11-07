@@ -3,7 +3,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { WorkSample } from '../types'
 import { exceedsBudget, MAX_TOTAL_BYTES } from '../lib/samples'
 import { prettyBytes } from '../lib/format'
-import { createSampleStore, loadSamples, type SampleStore, type StoreKind } from '../lib/sampleStore'
+import {
+  createSampleStore,
+  loadSamples,
+  type SampleStore,
+  type StoreKind,
+} from '../lib/sampleStore'
 
 export type StatusTone = 'info' | 'ok' | 'error'
 
@@ -27,7 +32,7 @@ export interface UseSamples {
  * Owns the work-sample list and everything that persists it.
  *
  * Components stay unaware of where samples live; they call `add` and
- * `remove` and read `status`. The store is resolved once on mount —
+ * `remove` and read `status`. The store is resolved once on mount,
  * see `src/lib/sampleStore.ts` for what "persist" means per host.
  */
 export function useSamples(): UseSamples {

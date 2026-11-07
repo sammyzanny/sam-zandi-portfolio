@@ -9,7 +9,7 @@ import styles from './RadioNav.module.css'
  *
  * Highlights whichever section is currently crossing the top third of
  * the viewport. Falls back to no highlight where IntersectionObserver is
- * unavailable — the links still work.
+ * unavailable, the links still work.
  */
 export function RadioNav() {
   const [active, setActive] = useState<string | null>(null)

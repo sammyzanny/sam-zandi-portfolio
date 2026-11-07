@@ -20,7 +20,7 @@
     border-color 0.22s ease;
 }
 
-/* One lit edge, not a full border treatment — these are the only cards
+/* One lit edge, not a full border treatment, these are the only cards
    on the page that get it. */
 .card::before {
   content: '';

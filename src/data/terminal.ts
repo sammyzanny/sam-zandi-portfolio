@@ -29,11 +29,12 @@ export const COMMANDS: TerminalCommand[] = [
     name: 'whoami',
     summary: 'the short version',
     run: () => [
-      `${IDENTITY.legalName} — ${IDENTITY.role}`,
+      `${IDENTITY.legalName}, ${IDENTITY.role}`,
       `${IDENTITY.city}`,
       '',
-      'Five years on financial applications. Java and Spring Boot behind,',
-      'Angular and TypeScript in front, engineering physics underneath.',
+      'Five years on financial applications at Citi. Java and Spring Boot',
+      'on the backend, Angular and TypeScript on the frontend, and an',
+      'engineering physics degree before that.',
     ],
   },
   {
@@ -61,7 +62,7 @@ export const COMMANDS: TerminalCommand[] = [
     summary: 'things I built',
     run: () =>
       PROJECTS.flatMap((project) => [
-        `${project.name} — ${project.context}`,
+        `${project.name} (${project.context})`,
         `  ${project.blurb}`,
         `  ${project.links.map((l) => l.href).join('  ')}`,
         '',
@@ -84,9 +85,9 @@ export const COMMANDS: TerminalCommand[] = [
     run: () => [
       'Open to full stack software engineering roles.',
       '',
-      'What I want: a system I can own end to end — the API, the UI and',
-      'the deploy between them — a team that reviews each other properly,',
-      'and permission to fix the boring things.',
+      "What I'm looking for: a system I can own end to end, API through",
+      'UI through deploy, a team that does real code review, and room to',
+      'fix the unglamorous things.',
       '',
       `Start here → ${IDENTITY.email}`,
     ],
@@ -105,7 +106,10 @@ export const COMMANDS: TerminalCommand[] = [
     name: 'sudo',
     summary: 'do not',
     secret: true,
-    run: () => ['Nice try. This user is not in the sudoers file.', 'The incident has been reported.'],
+    run: () => [
+      'Nice try. This user is not in the sudoers file.',
+      'The incident has been reported.',
+    ],
   },
   {
     name: 'vice',

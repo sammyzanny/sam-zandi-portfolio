@@ -1,18 +1,18 @@
 import type { Dossier } from '../types'
 
 /**
- * The spine of the page. Four things Sam does, argued in his voice.
+ * The spine of the page. Four things Sam does, in his own words.
  *
- * Every sentence here traces to a line on his resume — the writing is
- * new, the claims are not. `evidence` holds the resume-literal version
- * of each claim, shown beside the prose, so a sceptical reader can check
- * the writing against the record without leaving the card.
+ * Every sentence here traces to a line on his resume. The writing is
+ * new, the claims are not. `evidence` holds the resume's own wording
+ * for each claim, shown beside the prose, so a reader can check one
+ * against the other without leaving the card.
  */
 export const DOSSIERS: Dossier[] = [
   {
     id: '01',
     title: 'Modernize what is already running',
-    standfirst: 'The work that never demos well and always pays off.',
+    standfirst: "Platform work that doesn't show up in a demo.",
     body: [
       [
         "Citi's ",
@@ -20,16 +20,16 @@ export const DOSSIERS: Dossier[] = [
           text: 'loan application platform',
           href: 'https://online.citi.com/US/ag/lendingv2/ntc/application/loan',
         },
-        ' was live and serving thousands of production users, which meant every change had to land without anyone noticing it had.',
+        ' was live with thousands of users, so every change had to go in without anyone noticing.',
       ],
       [
-        'I moved the unit test suite off Karma and onto Jest — around 150 components, one at a time. GitHub Copilot drafted the boilerplate; I read every conversion before it merged, because a test that passes for the wrong reason is worse than no test. Test runtime dropped by about 40%, and the browser-dependent flaky tests went with it.',
+        'I moved the unit test suite from Karma to Jest, about 150 components. GitHub Copilot generated the boilerplate for each conversion and I reviewed every one before it merged. Test runtime dropped by roughly 40%, and the browser-dependent flaky tests went away with Karma.',
       ],
       [
-        'I led the move to Module Federation so teams could ship on demand instead of waiting for the biweekly release train. Then I cleaned the repository itself: two hundred-odd stale branches removed, sensitive files purged from history.',
+        "I led the move to Module Federation so each team could deploy its own micro-frontend on demand instead of waiting for the biweekly release train. I also cleaned up the repo: over 200 stale branches removed and sensitive files purged from history to meet Citi's source control policy.",
       ],
       [
-        'None of that appears in a sprint demo. All of it is why the next five years of that codebase cost less than the last five.',
+        "None of this was a feature. It's the kind of work that makes the next few years of a codebase cheaper.",
       ],
     ],
     evidence: [
@@ -42,16 +42,16 @@ export const DOSSIERS: Dossier[] = [
   {
     id: '02',
     title: 'Build on systems that hold money',
-    standfirst: 'Financial software has no forgiving path.',
+    standfirst: 'Full stack work on a platform with 5,000+ production users.',
     body: [
       [
-        'Full-stack feature work on a platform serving more than five thousand production users, against Java Spring Boot microservice REST APIs with an Angular and TypeScript frontend on top.',
+        'Full stack feature work: Java Spring Boot microservice REST APIs on the backend, Angular and TypeScript on the frontend, shipped across 65+ monthly releases.',
       ],
       [
-        "I built customer onboarding, including Citi's Pre-Login Experience — the stretch an applicant walks through before they have an account, where every extra field is a chance to lose them.",
+        "I built customer onboarding features, including Citi's Pre-Login Experience, which is what a new applicant goes through before they have an account. Every extra field there costs applicants, so the design mattered.",
       ],
       [
-        'Mobile screens were responsive and built to ADA and WCAG standards. A loan application a screen reader cannot complete is not a loan application; it is a wall with a form printed on it.',
+        "The mobile screens were responsive and built to ADA and WCAG 2.1, checked with AXE. If a screen reader can't get through the application, it isn't accessible, and for a bank that's a compliance problem as much as a usability one.",
       ],
     ],
     evidence: [
@@ -64,16 +64,16 @@ export const DOSSIERS: Dossier[] = [
   {
     id: '03',
     title: 'Find the thing that broke at 2am',
-    standfirst: 'Distributed systems fail in ways that do not reproduce locally.',
+    standfirst: 'Production support on distributed microservices.',
     body: [
       [
-        'I lived in Splunk. Tracing one failed application across service boundaries until the log line that actually mattered surfaced, and resisting the urge to fix the first plausible thing instead of the real one.',
+        'I owned production support across 45+ monthly releases. Most of that work happened in Splunk: tracing a failed application across service boundaries until I found the log line that explained it, then confirming that was the actual cause before fixing it.',
       ],
       [
-        'Then the fix, then the regression test, then the release. Over a few years of that, mean time to resolution came down by about 30%, and the platform got measurably steadier for it.',
+        'Then the fix, the regression test, and the release. Over those years I resolved 200+ defects and incidents, and mean time to resolution came down by about 30%.',
       ],
       [
-        'Physics is where I learned this. You do not debug a system by staring harder at it. You form a model, predict what it would produce, and go check.',
+        "The approach comes from physics. Make a model of what's happening, work out what the logs should show if the model is right, and go check.",
       ],
     ],
     evidence: [
@@ -86,26 +86,26 @@ export const DOSSIERS: Dossier[] = [
   {
     id: '04',
     title: 'Make the next person faster',
-    standfirst: 'I taught before I shipped, and it shows in how I ship.',
+    standfirst: 'Onboarding, grooming, documentation. Teaching before that.',
     body: [
       [
-        'I onboarded six incoming developers and stayed with each until they could contribute without anyone reading over their shoulder — about four weeks, as it turned out. I led Agile grooming across three teams so sprints stopped ending in surprises, and I wrote the internal documentation nobody volunteers for.',
+        'I onboarded six developers and worked with each of them until they could contribute on their own, which took about four weeks. I ran Agile grooming across three teams, and I wrote the internal documentation that nobody else wanted to.',
       ],
       [
-        'Before software I taught math and physics: Homewood-Flossmoor High School, online tutoring through ',
+        'Before software I taught math and physics: at Homewood-Flossmoor High School, online through ',
         { text: 'Brainfuse', href: 'http://home.brainfuse.com/' },
-        ', and international physics courses for ',
+        ', and physics courses for international students through ',
         { text: 'IPERC', href: 'https://www.iperc.org/' },
         '.',
       ],
       [
-        'With NextWaveSTEM I ran robotics and drone classes of thirty-plus K-12 students in partnership with Chicago Public Schools. Holding a room of thirty middle-schoolers and onboarding one nervous junior developer are the same skill wearing different clothes.',
+        'With NextWaveSTEM I taught robotics and drone classes of 30+ K-12 students, in partnership with Chicago Public Schools. Teaching a room of middle schoolers and onboarding a junior developer have more in common than you would think.',
       ],
     ],
     evidence: [
       'Onboarded and trained 6 incoming developers, bringing each to independent contribution within 4 weeks.',
       'Led Agile grooming sessions coordinating work across 3 teams, raising sprint commitment completion to ~90%.',
-      'Math & Physics Tutor / STEM Instructor — Masters Plus, Brainfuse, IPERC, NextWaveSTEM | 01/2019 – 11/2020. HS math/physics tutoring; K-12 robotics classes.',
+      'Math & Physics Tutor / STEM Instructor: Masters Plus, Brainfuse, IPERC, NextWaveSTEM, 01/2019 to 11/2020. HS math/physics tutoring; K-12 robotics classes.',
     ],
     stack: ['Agile', 'Jira', 'Internal documentation', 'Mentoring'],
   },

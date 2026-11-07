@@ -7,7 +7,7 @@ import styles from './Dossiers.module.css'
 /**
  * The argument of the page: four things Sam does, in his own words, each
  * paired with the resume lines the prose is built from. The claims and
- * their evidence sit side by side on purpose — a reader who distrusts
+ * their evidence sit side by side on purpose, a reader who distrusts
  * portfolio prose can check it without leaving the card.
  */
 export function Dossiers() {
@@ -16,7 +16,7 @@ export function Dossiers() {
       <SectionHead
         eyebrow="WRK 88.1"
         title="What I actually do"
-        note="Four files. The left column is how I would describe the work; the right column is the same work as it appears on my resume, unedited."
+        note="Four files. On the left, how I'd describe the work. On the right, the same work as it appears on my resume, unedited."
       />
 
       <div className={styles.list}>

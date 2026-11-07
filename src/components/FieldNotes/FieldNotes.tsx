@@ -18,15 +18,14 @@ export function FieldNotes() {
       <SectionHead
         eyebrow="NTS 96.3"
         title="Field notes"
-        note="Three opinions I hold about building software, drawn from work I have actually done."
+        note="Three opinions about building software, from work I've actually done."
       />
 
       {hasDrafts ? (
         <p className={styles.banner}>
-          <strong>DRAFTS — not yet approved by Sam.</strong> These were written from his work rather
-          than copied off his resume. Edit or delete each one in{' '}
-          <code>src/data/fieldNotes.ts</code>, then set <code>draft: false</code> to clear this
-          banner.
+          <strong>DRAFTS, not yet approved by Sam.</strong> These were written from his work rather
+          than copied off his resume. Edit or delete each one in <code>src/data/fieldNotes.ts</code>
+          , then set <code>draft: false</code> to clear this banner.
         </p>
       ) : null}
 

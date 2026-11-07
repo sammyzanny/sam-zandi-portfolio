@@ -47,7 +47,7 @@ export interface SkillGroup {
   items: string[]
 }
 
-/** An opinion piece. Written from Sam's work, but not on his resume —
+/** An opinion piece. Written from Sam's work, but not on his resume,
  *  every one ships flagged as a draft until he edits or cuts it. */
 export interface FieldNote {
   id: string
@@ -73,7 +73,7 @@ export type SampleKind =
   | 'image'
   /** Small non-image file, embedded as a data URL. */
   | 'file'
-  /** Too big to embed — the sample is the link. */
+  /** Too big to embed, the sample is the link. */
   | 'link'
 
 export interface WorkSample {
@@ -86,8 +86,8 @@ export interface WorkSample {
   mime: string
   /** Original file size in bytes, before any downscaling. 0 = unknown. */
   size: number
-  /** Image source — a data URL for uploads, a bundled asset URL for
-   *  curated samples — or null for a link-only sample. */
+  /** Image source, a data URL for uploads, a bundled asset URL for
+   *  curated samples, or null for a link-only sample. */
   data: string | null
   /** ISO date, YYYY-MM-DD. */
   added: string
@@ -95,6 +95,6 @@ export interface WorkSample {
   featured?: boolean
   /** Paragraphs for a featured sample. Ignored otherwise. */
   story?: string[]
-  /** Short label shown as an eyebrow — a step number, a product name. */
+  /** Short label shown as an eyebrow, a step number, a product name. */
   tag?: string
 }

@@ -1,5 +1,5 @@
 export const IDENTITY = {
-  /** The wordmark. Short form on purpose — it has to read at 100px. */
+  /** The wordmark. Short form on purpose, it has to read at 100px. */
   wordmark: 'SAM ZANDI',
   legalName: 'Samuel C. Zandi',
   role: 'Full Stack Software Engineer',
@@ -14,14 +14,14 @@ export const IDENTITY = {
 
 /** The one-paragraph version, written to be read out loud. */
 export const PITCH =
-  'Five years on a loan application platform that thousands of people ' +
-  'use to ask a bank for money. Java and Spring Boot behind it, Angular ' +
-  'and TypeScript in front of it, and a physics degree underneath the ' +
-  'whole thing. I am good at the unglamorous half of software: the test ' +
-  'suite nobody wants to migrate, the production bug that will not ' +
-  'reproduce, the new developer who needs four weeks of patience.'
+  "I spent five years on Citi's loan application platform. Java and " +
+  'Spring Boot on the backend, Angular and TypeScript on the frontend, ' +
+  "and a physics degree before any of it. I'm comfortable with the parts " +
+  "of the job that don't demo well: migrating a test suite, chasing a " +
+  "production bug that won't reproduce locally, getting a new developer " +
+  'up to speed.'
 
-/** Boot lines for the CRT panel in the hero. Kept short — the page
+/** Boot lines for the CRT panel in the hero. Kept short, the page
  *  underneath is fully rendered while this types. */
 export const BOOT_LINES = [
   'VICE-OS 5.1  (C) 1986',

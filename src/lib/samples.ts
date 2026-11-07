@@ -106,7 +106,7 @@ export async function sampleFromFile(file: File): Promise<WorkSample> {
       ...base,
       kind: 'link',
       data: null,
-      note: 'This image could not be decoded in the browser — add a link to it instead.',
+      note: 'This image could not be decoded in the browser. Add a link to it instead.',
     }
   }
 
@@ -118,7 +118,7 @@ export async function sampleFromFile(file: File): Promise<WorkSample> {
     ...base,
     kind: 'link',
     data: null,
-    note: `Too large to store in the page (${prettyBytes(file.size)}) — add a link to it instead.`,
+    note: `Too large to store in the page (${prettyBytes(file.size)}). Add a link to it instead.`,
   }
 }
 

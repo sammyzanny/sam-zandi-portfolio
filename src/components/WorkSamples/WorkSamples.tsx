@@ -15,7 +15,7 @@ import styles from './WorkSamples.module.css'
  * Evidence locker: the Citi Personal Loan application screen by screen,
  * with the loan tuner featured, plus anything dropped in later.
  *
- * Where uploads persist depends on the host — see `useSamples` and
+ * Where uploads persist depends on the host, see `useSamples` and
  * `src/lib/sampleStore.ts`. This component only cares about the file
  * going in and the card coming out.
  */
@@ -73,7 +73,7 @@ export function WorkSamples() {
     await add(cleaned)
   }
 
-  /** Only uploads are exported — the curated set lives in source. */
+  /** Only uploads are exported, the curated set lives in source. */
   function exportJson() {
     const text = JSON.stringify(uploadedOnly(samples), null, 2)
     const blob = new Blob([text], { type: 'application/json' })
@@ -94,8 +94,8 @@ export function WorkSamples() {
         title="Work samples"
         note={
           DESCRIBED_STEPS.length > 0
-            ? 'The Citi® Personal Loan application, in the order an applicant sees it. The loan tuner comes first because it was mine. Screens that sit behind the application are described rather than shown.'
-            : 'The Citi® Personal Loan application, screen by screen, in the order an applicant sees it. The loan tuner comes first because it was mine.'
+            ? 'The Citi® Personal Loan application in the order an applicant sees it. The loan tuner is first because it was my page. Screens that only appear inside an application are described rather than shown.'
+            : 'The Citi® Personal Loan application, screen by screen, in the order an applicant sees it. The loan tuner is first because it was my page.'
         }
       />
 
@@ -144,7 +144,7 @@ export function WorkSamples() {
               {storeKind === 'session' ? (
                 <>
                   <br />
-                  On this host, uploads last for the session — Export JSON to keep them.
+                  On this host uploads last for the session. Export JSON to keep them.
                 </>
               ) : null}
             </span>
@@ -217,19 +217,19 @@ export function WorkSamples() {
       {DESCRIBED_STEPS.length > 0 ? (
         <aside className={styles.described} aria-labelledby="described-heading">
           <p id="described-heading" className={styles.describedHead}>
-            Steps {DESCRIBED_STEPS[0]?.step}–{DESCRIBED_STEPS[DESCRIBED_STEPS.length - 1]?.step},
-            in words
+            Steps {DESCRIBED_STEPS[0]?.step}–{DESCRIBED_STEPS[DESCRIBED_STEPS.length - 1]?.step}, in
+            words
           </p>
           <p className={styles.describedWhy}>
-            These screens are reached only inside an application, so they are described here rather
-            than shown.
+            These screens only appear inside an application, so they're described here rather than
+            shown.
           </p>
           <ol className={styles.describedList}>
             {DESCRIBED_STEPS.map((step) => (
               <li key={step.step}>
                 <span className={styles.describedStep}>{step.step}</span>
                 <span>
-                  <strong>{step.title}</strong> — {step.note}
+                  <strong>{step.title}</strong>: {step.note}
                 </span>
               </li>
             ))}
@@ -239,7 +239,7 @@ export function WorkSamples() {
 
       {samples.length === 0 ? (
         <p className={styles.empty}>
-          Nothing filed yet — screenshots, design files and short write-ups land here.
+          Nothing filed yet. Screenshots, design files and short write-ups go here.
         </p>
       ) : null}
     </section>

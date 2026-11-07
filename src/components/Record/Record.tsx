@@ -4,7 +4,7 @@ import { SectionHead } from '../SectionHead/SectionHead'
 import styles from './Record.module.css'
 
 /**
- * The chronological record — roles, education, and the skills list.
+ * The chronological record, roles, education, and the skills list.
  *
  * Placed last on purpose. The dossiers make the case; this is the
  * receipt a recruiter checks it against.

@@ -3,8 +3,8 @@ import type { FieldNote } from '../types'
 /**
  * Opinion pieces. These are NOT on Sam's resume.
  *
- * They were drafted from his actual work — the Jest migration, the
- * Splunk triage, the physics degree, the AI tooling on his skills line —
+ * They were drafted from his actual work (the Jest migration, the
+ * Splunk triage, the physics degree, the AI tooling on his skills line)
  * and written in first person so they read as his. Every one ships with
  * `draft: true`, which renders a visible badge on the card and a banner
  * on the section. Sam edits or deletes each note and flips the flag;
@@ -17,33 +17,33 @@ export const FIELD_NOTES: FieldNote[] = [
   {
     id: 'suite-migration',
     title: 'A test suite migration is a code review in disguise',
-    dek: 'What 150 components tell you when you are forced to read all of them.',
+    dek: "What I learned from reading 150 components' worth of tests.",
     body: [
-      'Converting a test suite from Karma to Jest sounds like a find-and-replace with extra steps. It is not. To move a test you have to understand what it was actually asserting, and a surprising number of tests assert that the code does what it does rather than what it should.',
-      'Copilot drafted most of my conversions. That part was fast. The slow part — the valuable part — was reading each one and deciding whether the assertion deserved to survive the trip. Some did not. A few tests were passing because a mock returned undefined and the component happened to tolerate it.',
-      'You cannot get that from a dashboard. You get it from being forced to walk the whole codebase with a reason to look closely, which is the real argument for doing a migration by hand instead of by script.',
+      "Moving a test suite from Karma to Jest sounds like find and replace. It isn't. To move a test you have to understand what it actually asserts, and a surprising number of tests just assert that the code does whatever it currently does.",
+      "Copilot generated most of the conversions, and that part was quick. The slow part was reading each one and deciding whether the assertion was worth keeping. Some weren't. A few passed only because a mock returned undefined and the component happened to tolerate it.",
+      "You don't find that from a coverage dashboard. You find it by going through the whole codebase with a reason to look closely. That's the real argument for doing a migration by hand rather than with a script.",
     ],
     draft: true,
   },
   {
     id: 'physics-debugging',
     title: 'Physics gave me a debugging habit',
-    dek: 'Form a model, predict what it produces, go check. Repeat.',
+    dek: 'Make a model, predict what it implies, check the logs.',
     body: [
-      'An engineering physics degree does not teach you Spring Boot. It teaches you that when a system misbehaves, staring at it harder is not a technique.',
-      'The habit is: write down what you believe is happening, work out what that belief predicts you would see in the logs, then go look. If the prediction holds you have narrowed it. If it does not, you have learned something more useful than a fix.',
-      'This is why I am comfortable in Splunk at hour three of an incident. The search query is a hypothesis. Most of them are wrong, and that is fine, as long as each one is wrong in a way that eliminates something.',
+      "An engineering physics degree doesn't teach you Spring Boot. It does teach you that when a system misbehaves, staring harder at it doesn't help.",
+      "The habit: write down what you think is happening, figure out what that would look like in the logs, then go look. If the logs match, you've narrowed it down. If they don't, you've learned something more useful than a fix.",
+      "That's why I'm fine in Splunk three hours into an incident. Each search is a hypothesis. Most of them are wrong, and that's okay as long as each wrong one rules something out.",
     ],
     draft: true,
   },
   {
     id: 'ai-tooling',
     title: 'The model writes the diff. You still own it.',
-    dek: 'On using Copilot, Devin and Claude in a regulated codebase.',
+    dek: 'Using Copilot, Devin and Claude in a regulated codebase.',
     body: [
-      'I use AI tooling daily and I would not give it up. On the Jest migration it turned a month of mechanical typing into a week of reading, which is a much better use of a person.',
-      'But financial software has an auditor at the end of it, and "the assistant generated it" is not a defence anyone has ever accepted. Everything I merge, I can explain line by line. If I cannot, it does not merge, however confident the suggestion looked.',
-      'The failure mode I watch for is not bad code. It is plausible code — a diff that reads correctly, passes the tests, and quietly changes a behaviour nobody asked to change.',
+      "I use AI tools every day and I wouldn't go back. On the Jest migration they turned weeks of mechanical typing into days of reading, which is a better use of a person.",
+      "But financial software gets audited, and \"the assistant generated it\" isn't an explanation anyone accepts. Everything I merge I can explain line by line. If I can't, it doesn't merge, no matter how confident the suggestion looked.",
+      "The failure I watch for isn't bad code. It's plausible code: a diff that reads fine, passes the tests, and quietly changes behavior nobody asked to change.",
     ],
     draft: true,
   },

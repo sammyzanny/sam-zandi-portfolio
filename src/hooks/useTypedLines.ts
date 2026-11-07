@@ -6,8 +6,8 @@ import { useReducedMotion } from './useReducedMotion'
  * Reveal `lines` one at a time.
  *
  * Used by the hero's boot panel. The rest of the page is fully rendered
- * while this runs — the effect is decoration inside one small panel, not
- * a splash screen gating the content — and it is skipped entirely when
+ * while this runs, the effect is decoration inside one small panel, not
+ * a splash screen gating the content, and it is skipped entirely when
  * the visitor prefers reduced motion.
  */
 export function useTypedLines(lines: readonly string[], msPerLine = 220): string[] {

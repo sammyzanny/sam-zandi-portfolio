@@ -1,7 +1,7 @@
-# Sam Zandi — portfolio
+# Sam Zandi portfolio
 
 A single-page portfolio, built as a Vice City night drive. React 18, TypeScript, Vite, CSS
-Modules. No UI framework, no utility-class library, no state management library — the page is
+Modules. No UI framework, no utility-class library, no state management library, the page is
 small enough not to need them, and saying so is part of the point.
 
 **Live:** https://sammyzanny.github.io/sam-zandi-portfolio/
@@ -33,7 +33,7 @@ src/
   data/          Everything that is content. Edit here, not in components.
     identity.ts    Name, contact links, the pitch paragraph, boot lines
     dossiers.ts    The four "what I actually do" files, with their evidence
-    fieldNotes.ts  Opinion pieces — see the warning below
+    fieldNotes.ts  Opinion pieces, see the warning below
     record.ts      Roles, projects (TownCert first), skills (resume groups, verbatim), education
     samples.ts     Curated work samples: the Citi loan flow, screen by screen
     samples.json   Uploads exported from the page and committed back
@@ -42,7 +42,7 @@ src/
   assets/samples/  The screenshots behind samples.ts (JPEG, ≤1500px, ≤380 KB)
   components/    One folder per component: Component.tsx + Component.module.css
   hooks/         useSamples, useReducedMotion, useTypedLines
-  lib/           Pure helpers — formatting, image compression, the sample store
+  lib/           Pure helpers, formatting, image compression, the sample store
   styles/        tokens.css (every colour and type decision) + global.css
 ```
 
@@ -78,13 +78,13 @@ flow ships as screenshots. `true` (the default) shows only the loan tuner plus t
 visitor to the public Citi URL can reach without an account, and describes the other nine in a
 text panel; `false` shows all twelve. With the flag on, the withheld images are not referenced
 anywhere, and a small plugin in `vite.config.ts` prunes unreferenced images from the build, so
-they do not ship to a static host either — even as orphan files. Flip it, rebuild, redeploy.
+they do not ship to a static host either, even as orphan files. Flip it, rebuild, redeploy.
 
 **Curated** samples are code: `src/data/samples.ts` imports each screenshot from
 `src/assets/samples/` and pairs it with a title, a caption and (for the loan tuner) a longer
 story. They render first, the featured one full-width. To change the set, edit that file. Vite
 hashes the images in a normal build and inlines them in the single-file build, so the same
-source works on both hosts. Curated samples cannot be removed from the page — only from source.
+source works on both hosts. Curated samples cannot be removed from the page, only from source.
 
 **Uploaded** samples come from the **+ Add sample** control. A dropped image is downscaled until
 it fits 380 KB; non-images under 520 KB embed as-is; anything larger becomes a link card. Where
@@ -101,11 +101,11 @@ set, so the file stays small. Budgets are in `src/lib/samples.ts`.
 
 ## Deploying
 
-**Vercel / Netlify** — build command `npm run build`, publish directory `dist`. Nothing else.
+**Vercel / Netlify**, build command `npm run build`, publish directory `dist`. Nothing else.
 
-**GitHub Pages** — set `base` in `vite.config.ts` to `'/<repo-name>/'`, then publish `dist`.
+**GitHub Pages**, set `base` in `vite.config.ts` to `'/<repo-name>/'`, then publish `dist`.
 
-**As a Claude Artifact** — `npm run build:single`, then publish `dist-single/index.html`. That
+**As a Claude Artifact**, `npm run build:single`, then publish `dist-single/index.html`. That
 build inlines the CSS, JS and images into one document, which is what makes the self-republishing
 upload store work.
 
@@ -118,7 +118,7 @@ npm test
 Covers the formatting helpers, the terminal's command routing and tab completion, the HTML
 rewrite that persists uploads (including that a caption cannot break out of its own `<script>`
 tag), the curated/uploaded split, the Work Samples section's ordering, and the Terminal component
-end to end — typing, history, completion, `clear`.
+end to end, typing, history, completion, `clear`.
 
 ## Fonts
 

@@ -32,8 +32,8 @@ export function uploadedOnly(samples: readonly WorkSample[]): WorkSample[] {
  * The list for a fresh page load: the curated samples, then whatever
  * the page has saved.
  *
- * Saved samples come from the inline `#samples-data` block first — that
- * is what the artifact store rewrites when it republishes — and fall
+ * Saved samples come from the inline `#samples-data` block first, that
+ * is what the artifact store rewrites when it republishes, and fall
  * back to the committed `src/data/samples.json`, which is how uploads
  * get into a statically hosted build.
  */
@@ -71,8 +71,8 @@ export function withSamples(html: string, samples: readonly WorkSample[]): strin
 /**
  * Fetch the document this page was served as.
  *
- * The live DOM is not usable here — it carries React's output and the
- * host's injected scripts — so we re-request the served HTML instead.
+ * The live DOM is not usable here, it carries React's output and the
+ * host's injected scripts, so we re-request the served HTML instead.
  */
 async function servedDocument(): Promise<string> {
   const response = await fetch(window.location.href, { cache: 'no-store' })
@@ -106,7 +106,7 @@ function sessionStore(): SampleStore {
  *
  * On a Claude Artifact the runtime hands us a `publish` call, so saving
  * writes a new version of the page and every open viewer reloads to it.
- * Everywhere else — dev server, Vercel, Netlify, Pages — there is no
+ * Everywhere else, dev server, Vercel, Netlify, Pages, there is no
  * backend to write to, so edits are session-local by design.
  */
 export async function createSampleStore(): Promise<SampleStore> {

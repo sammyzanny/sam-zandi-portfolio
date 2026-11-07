@@ -18,9 +18,8 @@ export function Footer() {
         </a>
       </p>
       <p className={styles.colophon}>
-        React 18, TypeScript and Vite. CSS Modules over a single token file — no UI framework, no
-        utility classes. Monoton, Archivo and JetBrains Mono. Built to be read on a phone at a bus
-        stop.
+        React 18, TypeScript and Vite. CSS Modules over a single token file, no UI framework, no
+        utility classes. Monoton, Archivo and JetBrains Mono. Readable on a phone.
       </p>
     </footer>
   )

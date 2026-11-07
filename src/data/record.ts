@@ -13,7 +13,7 @@ export const ROLES: Role[] = [
     start: '09/2022',
     end: '06/2026',
     summary:
-      'Loan application platform. Spring Boot APIs, Angular frontend, the Jest migration, Module Federation, Splunk triage, and onboarding the team behind me.',
+      'Loan application platform. Spring Boot APIs, Angular frontend, the Jest migration, Module Federation, production support in Splunk, and onboarding new developers.',
   },
   {
     title: 'Intermediate Software Engineer',
@@ -49,11 +49,11 @@ export const PROJECTS: Project[] = [
     name: 'TownCert',
     context: 'Founder · municipal compliance SaaS · live, 2026',
     blurb:
-      'Illinois has no statewide contractor license, so every south-suburban village sets its own registration rules. TownCert tracks all 37 of them so a contractor never loses a permit to a lapsed certificate.',
+      "Illinois has no statewide contractor license, so each village in the south suburbs sets its own registration rules. TownCert tracks the rules for 37 of them so a contractor doesn't lose a permit to a lapsed certificate.",
     points: [
-      'Multi-tenant subscription SaaS: Next.js 16 and TypeScript, Tailwind, PostgreSQL on Neon with Drizzle ORM, Clerk auth, Stripe Billing, Cloudflare R2 and Resend, deployed on Vercel with daily cron jobs.',
-      'A rules engine encoding each municipality\'s fees, bonds, insurance minimums and expiry pattern — fixed, calendar, or rolling — that computes every renewal date and runs a 60/30/14/0-day reminder ladder.',
-      'Flags insurance or bond documents that will lapse before a renewal; Stripe Checkout with idempotent webhook sync and trial carry-over; org and role-based access; an admin console for rule verification.',
+      'Multi-tenant subscription SaaS: Next.js 16 and TypeScript, Tailwind, PostgreSQL on Neon with Drizzle ORM, Clerk auth, Stripe Billing, Cloudflare R2 and Resend. Deployed on Vercel with daily cron jobs.',
+      "A rules engine that encodes each municipality's fees, bonds, insurance minimums and expiry pattern (fixed date, calendar year, or rolling year), computes every renewal date, and runs a 60/30/14/0 day reminder ladder.",
+      'Flags insurance or bond documents that will lapse before a renewal. Stripe Checkout with idempotent webhook sync and trial carry-over, org and role based access with invitations, and an admin console for rule verification.',
       '47 Vitest and Playwright tests across unit, integration and end to end.',
     ],
     links: [
@@ -63,9 +63,9 @@ export const PROJECTS: Project[] = [
   },
   {
     name: 'The Crack App',
-    context: 'Areawide Waterproofing · shipped MVP with live customers',
+    context: 'Areawide Waterproofing · MVP with live customers',
     blurb:
-      'A business app with real customers on it, built so a homeowner can request a waterproofing consultation without a phone call.',
+      'A business app with real customers. Homeowners request a waterproofing consultation through the app instead of calling.',
     points: [
       'React Native frontend with a Ruby on Rails backend, supporting live customer operations.',
       'AWS S3 storage and automated email workflows through Action Mailer.',
@@ -80,8 +80,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Animal Swapping',
     context: 'Animal Crossing: New Horizons · community trading',
-    blurb:
-      'A trading platform for a Nintendo Switch community, which is a matching problem wearing a very cheerful hat.',
+    blurb: 'A trading platform for an Animal Crossing: New Horizons community on Nintendo Switch.',
     points: [
       'React frontend with a Ruby on Rails backend.',
       'A matching algorithm that pairs users for optimized item trading.',

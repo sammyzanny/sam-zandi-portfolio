@@ -12,7 +12,7 @@ interface Line {
 }
 
 const GREETING: string[] = [
-  'VICE-OS 5.1 — interactive resume shell',
+  'VICE-OS 5.1 (interactive resume shell)',
   '',
   'Type `help` for the command list, or use a shortcut below.',
 ]
@@ -103,7 +103,7 @@ export function Terminal() {
       <SectionHead
         eyebrow="TRM 92.5"
         title="Ask it yourself"
-        note="A real shell over the same data this page is built from — so it cannot tell you anything the sections above contradict. Try `hire`."
+        note="A working shell over the same data the rest of this page uses, so it can't tell you anything the sections above don't. Try `hire`."
       />
 
       <div className={styles.shell}>

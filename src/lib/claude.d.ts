@@ -3,7 +3,7 @@
  *
  * When this page is published as a Claude Artifact, the host injects
  * `window.claude`. `use('artifact')` resolves a namespace whose
- * `publish(html)` replaces the live page with a new version — which is
+ * `publish(html)` replaces the live page with a new version, which is
  * how work samples persist there.
  *
  * On any other host (Vercel, Netlify, GitHub Pages, `npm run dev`)

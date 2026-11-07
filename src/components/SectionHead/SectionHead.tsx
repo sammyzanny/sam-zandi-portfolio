@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import styles from './SectionHead.module.css'
 
 interface Props {
-  /** Short label above the rule — a station call sign, or a file number. */
+  /** Short label above the rule, a station call sign, or a file number. */
   eyebrow: string
   title: string
   /** Optional line of context under the heading. */
