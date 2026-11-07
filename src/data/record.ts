@@ -46,16 +46,20 @@ export const ROLES: Role[] = [
 
 export const PROJECTS: Project[] = [
   {
-    name: 'ALS — loan tuner rebuild',
-    context: 'Citi Personal Loan · full stack · in production',
+    name: 'TownCert',
+    context: 'Founder · municipal compliance SaaS · live, 2026',
     blurb:
-      'The frontend and the backend each calculated the monthly payment, and they did not always agree. ALS made the backend the only source of truth and rebuilt the page around it.',
+      'Illinois has no statewide contractor license, so every south-suburban village sets its own registration rules. TownCert tracks all 37 of them so a contractor never loses a permit to a lapsed certificate.',
     points: [
-      'A new backend call fires on every loan-amount change and returns the exact monthly payment for every available term.',
-      'The frontend stopped calculating: the term cards, the AutoPay discount and the summary bar render straight from the response.',
-      'The loan-term data arrived in a new shape, so the tuner page was redesigned and cleaned up around the new model rather than patched.',
+      'Multi-tenant subscription SaaS: Next.js 16 and TypeScript, Tailwind, PostgreSQL on Neon with Drizzle ORM, Clerk auth, Stripe Billing, Cloudflare R2 and Resend, deployed on Vercel with daily cron jobs.',
+      'A rules engine encoding each municipality\'s fees, bonds, insurance minimums and expiry pattern — fixed, calendar, or rolling — that computes every renewal date and runs a 60/30/14/0-day reminder ladder.',
+      'Flags insurance or bond documents that will lapse before a renewal; Stripe Checkout with idempotent webhook sync and trial carry-over; org and role-based access; an admin console for rule verification.',
+      '47 Vitest and Playwright tests across unit, integration and end to end.',
     ],
-    links: [{ label: 'See the page', href: '#samples' }],
+    links: [
+      { label: 'Live app', href: 'https://towncert.com/' },
+      { label: 'GitHub', href: 'https://github.com/sammyzanny/permitpath' },
+    ],
   },
   {
     name: 'The Crack App',

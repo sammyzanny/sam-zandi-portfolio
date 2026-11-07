@@ -36,8 +36,8 @@ describe('runCommand', () => {
     expect(help).not.toContain('sudo')
   })
 
-  it('includes the ALS project in projects', () => {
-    expect(runCommand('projects')?.join('\n')).toContain('ALS')
+  it('includes TownCert in projects', () => {
+    expect(runCommand('projects')?.join('\n')).toContain('TownCert')
   })
 })
 

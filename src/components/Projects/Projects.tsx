@@ -9,7 +9,7 @@ export function Projects() {
       <SectionHead
         eyebrow="SID 104.5"
         title="Projects"
-        note="One from work, two from outside it. Each has a backend, a frontend and something running."
+        note="One I founded and run, two I built earlier. Each has a backend, a frontend and something live."
       />
 
       <div className={styles.grid}>
