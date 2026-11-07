@@ -33,7 +33,7 @@ src/
   data/          Everything that is content. Edit here, not in components.
     identity.ts    Name, contact links, the pitch paragraph, boot lines
     dossiers.ts    The four "what I actually do" files, with their evidence
-    fieldNotes.ts  Opinion pieces, see the warning below
+    fieldNotes.ts  Opinion pieces, each with a draft flag
     record.ts      Roles, projects (TownCert first), skills (resume groups, verbatim), education
     samples.ts     Curated work samples: the Citi loan flow, screen by screen
     samples.json   Uploads exported from the page and committed back
@@ -60,14 +60,12 @@ resume lines in a column beside them, so a sceptical reader can check the prose 
 record without leaving the card. The chronological job history sits near the bottom, where a
 reference belongs.
 
-## ⚠️ Field notes are drafts
+## Field notes
 
-`src/data/fieldNotes.ts` holds three opinion pieces that are **not on Sam's resume**. They were
-drafted from his real work and written in first person. Every one ships with `draft: true`, which
-renders a badge on the card and a banner on the section.
-
-**Before sharing this link with anyone:** read each note, rewrite it so it actually sounds like
-you, or delete it. Then set `draft: false` to clear the banner.
+`src/data/fieldNotes.ts` holds three short opinion pieces written from Sam's work rather than
+copied off his resume. Each has a `draft` flag: while it is `true`, the card shows a badge and
+the section shows a banner, so an unreviewed note never goes in front of a reader quietly. All
+three are currently approved. Flip the flag back on while rewriting one.
 
 ## Work samples
 

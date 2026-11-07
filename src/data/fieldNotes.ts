@@ -1,17 +1,13 @@
 import type { FieldNote } from '../types'
 
 /**
- * Opinion pieces. These are NOT on Sam's resume.
+ * Opinion pieces. These are not on Sam's resume; they come from the work
+ * behind it (the Jest migration, the Splunk triage, the physics degree,
+ * the AI tooling on his skills line).
  *
- * They were drafted from his actual work (the Jest migration, the
- * Splunk triage, the physics degree, the AI tooling on his skills line)
- * and written in first person so they read as his. Every one ships with
- * `draft: true`, which renders a visible badge on the card and a banner
- * on the section. Sam edits or deletes each note and flips the flag;
- * nothing here should go in front of a recruiter unread.
- *
- * To publish one: edit the body, set `draft: false`.
- * To cut one: delete the object.
+ * A note with `draft: true` renders a badge on its card and a banner on
+ * the section until it is reviewed. All three were approved on
+ * 2026-11-07. Set the flag again on any note you rewrite.
  */
 export const FIELD_NOTES: FieldNote[] = [
   {
@@ -23,7 +19,7 @@ export const FIELD_NOTES: FieldNote[] = [
       "Copilot generated most of the conversions, and that part was quick. The slow part was reading each one and deciding whether the assertion was worth keeping. Some weren't. A few passed only because a mock returned undefined and the component happened to tolerate it.",
       "You don't find that from a coverage dashboard. You find it by going through the whole codebase with a reason to look closely. That's the real argument for doing a migration by hand rather than with a script.",
     ],
-    draft: true,
+    draft: false,
   },
   {
     id: 'physics-debugging',
@@ -34,7 +30,7 @@ export const FIELD_NOTES: FieldNote[] = [
       "The habit: write down what you think is happening, figure out what that would look like in the logs, then go look. If the logs match, you've narrowed it down. If they don't, you've learned something more useful than a fix.",
       "That's why I'm fine in Splunk three hours into an incident. Each search is a hypothesis. Most of them are wrong, and that's okay as long as each wrong one rules something out.",
     ],
-    draft: true,
+    draft: false,
   },
   {
     id: 'ai-tooling',
@@ -45,6 +41,6 @@ export const FIELD_NOTES: FieldNote[] = [
       "But financial software gets audited, and \"the assistant generated it\" isn't an explanation anyone accepts. Everything I merge I can explain line by line. If I can't, it doesn't merge, no matter how confident the suggestion looked.",
       "The failure I watch for isn't bad code. It's plausible code: a diff that reads fine, passes the tests, and quietly changes behavior nobody asked to change.",
     ],
-    draft: true,
+    draft: false,
   },
 ]
