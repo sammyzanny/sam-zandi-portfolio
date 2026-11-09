@@ -94,7 +94,7 @@ export function WorkSamples() {
         title="Work samples"
         note={
           DESCRIBED_STEPS.length > 0
-            ? 'The Citi® Personal Loan application in the order an applicant sees it. The loan tuner is first because it was my page. Screens that only appear inside an application are described rather than shown.'
+            ? 'The Citi® Personal Loan application in the order an applicant sees it, up to the credit check. The loan tuner is first because it was my page. Screens after the credit decision are described rather than shown.'
             : 'The Citi® Personal Loan application, screen by screen, in the order an applicant sees it. The loan tuner is first because it was my page.'
         }
       />
@@ -221,8 +221,8 @@ export function WorkSamples() {
             words
           </p>
           <p className={styles.describedWhy}>
-            These screens only appear inside an application, so they're described here rather than
-            shown.
+            These screens come after the credit decision and belong to a booked loan, so they're
+            described here rather than shown.
           </p>
           <ol className={styles.describedList}>
             {DESCRIBED_STEPS.map((step) => (

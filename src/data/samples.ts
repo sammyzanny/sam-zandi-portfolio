@@ -5,22 +5,27 @@ import exported from './samples.json'
 import welcome from '../assets/samples/01-welcome.jpg'
 import personalInformation from '../assets/samples/02-personal-information.jpg'
 import loanTuner from '../assets/samples/03-loan-tuner.jpg'
+import contactInformation from '../assets/samples/04-contact-information.jpg'
+import financialInformation from '../assets/samples/05-financial-information.jpg'
+import citizenship from '../assets/samples/06-citizenship.jpg'
+import reviewAndApply from '../assets/samples/07-review-and-apply.jpg'
 
 /**
  * Curated work samples: the Citi Personal Loan application, screen by
  * screen, in the order an applicant sees it.
  *
  * THE SWITCH. `PUBLIC_SAFE` decides how much of the flow ships as
- * screenshots.
+ * screenshots. The line is the credit check: everything an applicant
+ * sees before Apply is the pre-decision flow Citi puts in front of
+ * anyone holding a pre-screened offer. Everything after it is account
+ * servicing for a booked loan.
  *
- *   true   Only screens a visitor to the public Citi URL can reach
- *          without an account (Welcome, Personal information) plus the
- *          loan tuner, the centrepiece, appear as images. The rest of
- *          the flow is described in words in a panel below them, and
- *          those images are not referenced, so a production build does
- *          not bundle them.
+ *   true   Steps 01 to 07 (through Review and apply) appear as images.
+ *          Steps 08 to 12 are described in words in a panel below them,
+ *          and those images are not referenced, so a production build
+ *          does not bundle them.
  *
- *   false  All twelve screens appear as images, provided the nine
+ *   false  All twelve screens appear as images, provided the five
  *          withheld ones are present in `src/assets/samples/withheld/`.
  *          That folder is git-ignored; keep the files locally.
  *
@@ -41,7 +46,7 @@ interface Step {
   title: string
   note: string
   fileName: string
-  /** Reachable on the public Citi URL without an account. */
+  /** Seen before the credit check, so part of the pre-decision flow. */
   public: boolean
 }
 
@@ -68,6 +73,10 @@ const WITHHELD: Record<string, string> = PUBLIC_SAFE
 const IMAGES: Record<string, string> = {
   '01': welcome,
   '02': personalInformation,
+  '04': contactInformation,
+  '05': financialInformation,
+  '06': citizenship,
+  '07': reviewAndApply,
   ...WITHHELD,
 }
 
@@ -91,28 +100,28 @@ const STEPS: Step[] = [
     title: 'Contact information',
     note: 'Email, phones and address, including the P.O. Box option and the no-mobile-number fallback.',
     fileName: '04-contact-information.jpg',
-    public: false,
+    public: true,
   },
   {
     step: '05',
     title: 'Financial information',
     note: 'Annual income, non-taxable income and housing payment. The three inputs underwriting needs.',
     fileName: '05-financial-information.jpg',
-    public: false,
+    public: true,
   },
   {
     step: '06',
     title: 'Citizenship',
     note: "Residency status. One field on its own step, because the branching behind it isn't small.",
     fileName: '06-citizenship.jpg',
-    public: false,
+    public: true,
   },
   {
     step: '07',
     title: 'Review and apply',
     note: 'The chosen terms restated, the full disclosure set, and the two consents that have to be checked before Apply is enabled.',
     fileName: '07-review-and-apply.jpg',
-    public: false,
+    public: true,
   },
   {
     step: '08',
