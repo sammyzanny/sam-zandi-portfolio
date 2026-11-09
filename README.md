@@ -72,11 +72,12 @@ three are currently approved. Flip the flag back on while rewriting one.
 Two kinds live in the same section.
 
 **The switch.** `PUBLIC_SAFE` at the top of `src/data/samples.ts` decides how much of the Citi
-flow ships as screenshots. `true` (the default) shows only the loan tuner plus the two screens a
-visitor to the public Citi URL can reach without an account, and describes the other nine in a
-text panel; `false` shows all twelve. With the flag on, the withheld images are not referenced
-anywhere, and a small plugin in `vite.config.ts` prunes unreferenced images from the build, so
-they do not ship to a static host either, even as orphan files. Flip it, rebuild, redeploy.
+flow ships as screenshots. The line is the credit check. `true` (the default) shows the
+pre-decision flow, steps 01 through 07 ending at Review and apply, and describes the five
+post-approval screens in a text panel; `false` shows all twelve. With the flag on, the withheld
+images are not referenced anywhere, and a small plugin in `vite.config.ts` prunes unreferenced
+images from the build, so they do not ship to a static host either, even as orphan files. Flip
+it, rebuild, redeploy.
 
 **Curated** samples are code: `src/data/samples.ts` imports each screenshot from
 `src/assets/samples/` and pairs it with a title, a caption and (for the loan tuner) a longer

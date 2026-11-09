@@ -35,8 +35,9 @@ describe('<WorkSamples />', () => {
     await renderSettled()
     if (DESCRIBED_STEPS.length === 0) return
     expect(screen.getByText(/in words/)).toBeInTheDocument()
-    expect(screen.getByText('Review and apply')).toBeInTheDocument()
-    expect(screen.queryByAltText('Review and apply')).not.toBeInTheDocument()
+    expect(screen.getByText('Loan note summary')).toBeInTheDocument()
+    expect(screen.queryByAltText('Loan note summary')).not.toBeInTheDocument()
+    expect(screen.getByAltText('Review and apply')).toBeInTheDocument()
   })
 
   it('offers no remove control on curated samples', async () => {

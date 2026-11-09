@@ -71,18 +71,9 @@ describe('curated vs uploaded', () => {
     expect(shown.some((t) => t.includes('Step 01'))).toBe(true)
     expect(shown.some((t) => t.includes('Step 02'))).toBe(true)
     expect(shown.some((t) => t.includes('Step 03'))).toBe(true)
-    expect(shown.some((t) => t.includes('Step 07'))).toBe(false)
-    expect(DESCRIBED_STEPS.map((d) => d.step)).toEqual([
-      '04',
-      '05',
-      '06',
-      '07',
-      '08',
-      '09',
-      '10',
-      '11',
-      '12',
-    ])
+    expect(shown.some((t) => t.includes('Step 07'))).toBe(true)
+    expect(shown.some((t) => t.includes('Step 08'))).toBe(false)
+    expect(DESCRIBED_STEPS.map((d) => d.step)).toEqual(['08', '09', '10', '11', '12'])
   })
 
   it('every curated sample that claims an image actually has one', () => {
